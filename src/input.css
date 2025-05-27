@@ -13,3 +13,10 @@
         @apply rounded-full h-[3rem] shadow-xs
     }
 }
+
+@layer components{
+    .cart-btn{
+        @apply h-3 w-3 rounded-full border flex items-center justify-center
+    }
+}
+

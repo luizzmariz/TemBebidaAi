@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/shopping-cart.css" />
+    <title>Carrinho</title>
+  </head>
+  <body>
+    <header class="flex p-5 items-center gap-20">
+      <div
+        class="flex justify-center items-center h-10 w-10 bg-gray-100 rounded-[6px]"
+      >
+        <img
+          class="h-5 w-5"
+          src="images/arrow-icon.svg"
+          alt="back-arrow-icon"
+        />
+      </div>
+      <h1 class="font-bold text-[1.3rem]">Seu Carrinho</h1>
+    </header>
+    <main>
+      <section class="overflow-scroll h-[20rem]">
+        <template>
+          <div class="flex p-5 py-2 gap-2 border-b-2 border-gray-100">
+            <img
+              class="w-20 h-20 rounded-2xl"
+              src="images/beer-dummy-photo.jpg"
+              alt="beer"
+            />
+            <div>
+              <h2 class="font-bold">Cerveja Genérica de teste</h2>
+              <p class="opacity-[0.43]">Texto genérico da loja</p>
+              <span class="font-bold" id="price">R$ 29.99</span>
+            </div>
+            <div class="flex items-center gap-2 mt-10">
+              <button
+                class="bg-gray-100 h-5 w-5 rounded-full border flex items-center justify-center"
+              >
+                <img src="images/minus-svgrepo-com.svg" />
+              </button>
+              <span class="opacity-[0.43]" id="units">01</span>
+              <button
+                class="bg-black h-5 w-5 rounded-full border flex items-center justify-center"
+              >
+                <img src="images/plus-svgrepo-com(3).svg" />
+              </button>
+            </div>
+          </div>
+        </template>
+      </section>
+      <section>
+        <div class="bg-gray-300 w-[90%] p-2 flex rounded-[10px] m-auto">
+          <input
+            class="border-none bg-transparent"
+            type="text"
+            id="promo-code"
+            name="promo-code"
+            placeholder="Código de promoção"
+          />
+          <button
+            type="button"
+            class="text-white font-medium w-22 rounded-[13px] bg-primary-orange relative -right-17"
+          >
+            Aplicar
+          </button>
+        </div>
+        <div class="flex flex-col p-10">
+          <div class="cart-prices">
+            <h2>Subtotal :</h2>
+            <p id="subtotal-price">R$30.99</p>
+          </div>
+          <div class="cart-prices">
+            <h2>Frete :</h2>
+            <p id="shipping-price">R$4.99</p>
+          </div>
+          <div class="cart-prices">
+            <h2>Total :</h2>
+            <span class="opacity-[0.33] relative -right-20" id="items-qnt"
+              >(4 itens)</span
+            >
+            <p id="total-price">R$50.99</p>
+          </div>
+        </div>
+        <button
+          class="bg-primary-orange text-white w-[90%] rounded-[10px] font-medium ml-5 shadow-2xl"
+        >
+          Checkout
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
