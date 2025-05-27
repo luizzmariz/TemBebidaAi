@@ -1,0 +1,19 @@
+h2{
+    font-weight: bold;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+.cart-prices{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 1rem;
+}
+
+.cart-prices p{
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    padding-right: 1.5rem;
+}
