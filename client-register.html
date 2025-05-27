@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/client-register.css" />
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="scripts/client-register.js" defer></script>
+    <title>Registre-se</title>
+  </head>
+  <body>
+    <header>
+      <div class="ml-3 mt-5">
+        <h3 class="text-orange-600 font-bold">TemBebidaAi ?</h3>
+        <h1 class="text-3xl font-semibold mt-2">Registre sua conta</h1>
+      </div>
+    </header>
+    <main>
+      <form>
+        <section class="mt-5 p-[1rem] flex flex-col">
+          <label class="mb-2" for="email">Seu Email:</label>
+          <input
+            type="email"
+            name="user-email"
+            id="email"
+            placeholder=" Exemplo: Usuario@gmail.com"
+            required
+          />
+          <label for="password">Senha:</label>
+          <div class="relative">
+            <input
+              class="w-full"
+              type="password"
+              id="password"
+              form="user-password"
+              required
+            />
+            <button
+              type="button"
+              id="toggle-password-btn"
+              class="absolute right-2 top-1/2 -translate-y-1/2 p-1"
+            >
+              <img class="w-5 h-5 mb-1" src="images/eye.svg" alt="eye-icon" />
+            </button>
+          </div>
+          <div class="flex align-middle justify-between items-center">
+            <div
+              class="flex flex-row-reverse items-center align-middle gap-1.5"
+            >
+              <label for="remember">Lembrar de mim</label>
+              <input type="checkbox" id="remember" name="remember-me" />
+            </div>
+            <div>
+              <p class="opacity-[0.33]">Esqueceu a senha?</p>
+            </div>
+          </div>
+          <button class="bg-primary-orange text-white mt-2">Continuar</button>
+          <div class="flex items-center my-6">
+            <hr class="flex-grow border-gray-500" />
+            <span class="mx-2 text-gray-600 text-sm">ou faça login com</span>
+            <hr class="flex-grow border-gray-500" />
+          </div>
+        </section>
+        <section class="flex flex-col gap-5 p-[1rem]">
+          <button class="bg-black text-white">
+            <img class="m-[auto] w-10" src="images/icons8-google.svg" />
+          </button>
+          <button class="shadow-md border border-gray-300">
+            <img class="m-[auto] w-10" src="images/icons8-facebook.svg" />
+          </button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

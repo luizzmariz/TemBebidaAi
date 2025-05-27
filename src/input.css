@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme{
+    --color-primary-orange: #fa5805;
+}
+
+@layer base{
+    input{
+        @apply bg-white h-[2.5rem] rounded-[6px] border border-gray-300 mb-2
+    }
+
+    button{
+        @apply rounded-full h-[3rem] shadow-xs
+    }
+}
