@@ -1,0 +1,10 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#cadastro-bebida {
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+}
