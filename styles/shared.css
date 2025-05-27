@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --orange-primary: #fa5805;
+    --body-bg: #f6f6f6;
+    --black-primary: black;
+}
+
