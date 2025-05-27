@@ -26,7 +26,7 @@ document.getElementById("formBebida").addEventListener("submit", function(e) {
     localStorage.setItem("bebidas", JSON.stringify(bebidas));
     this.reset();
     
-    // Mostra a mensagem
+    // Mostra a mensagem de sucesso
     const mensagem = document.getElementById("mensagem-sucesso");
     mensagem.style.display = "block";
 

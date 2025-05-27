@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+
+a{
+    margin: 5px
+}
+
+#cadastro {
+    border-radius: 20px;
+    width: 70%;
+    margin: auto;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+  #cadastro {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #cadastro {
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    padding: 40px;
+  }
+}
