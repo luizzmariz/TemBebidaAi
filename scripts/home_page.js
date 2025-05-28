@@ -46,7 +46,7 @@
         ordenar('normal');
     }
 
-    function renderProdutos(lista, containerId) 
+    function mostrarProdutos(lista, containerId) 
     {
       if(mostrarConteudoFiltrado === conteudoFiltrado.hidden)
       {
@@ -61,7 +61,10 @@
 
       lista.slice(0, 4).forEach(prod => {
         const card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'card clickable Expandable';
+
+        card.addEventListener('click', () => VerProduto(prod));
+        
         card.innerHTML = `
           <img src="images/cerveja.png" class="card-img-top" alt="${prod.nome}">
           <div class="card-body">
@@ -148,37 +151,37 @@
         case 'normal': 
             mostrarConteudoFiltrado = false;
 
-            renderProdutos(lista.filter((produto) => { return produto.promocao === true }), 'ofertas-container');
+            mostrarProdutos(lista.filter((produto) => { return produto.promocao === true }), 'ofertas-container');
             
-            renderProdutos(lista.filter((produto) => { return produto.destaque === true }), 'destaques-container');
+            mostrarProdutos(lista.filter((produto) => { return produto.destaque === true }), 'destaques-container');
 
             lista.sort((a, b) => a.distancia - b.distancia);
-            renderProdutos(lista, 'proximos-container');
+            mostrarProdutos(lista, 'proximos-container');
             break;
         case 'preco-asc': 
             lista.sort((a, b) => a.preco - b.preco); 
             mostrarConteudoFiltrado = true;
-            renderProdutos(lista, 'filter-container');
+            mostrarProdutos(lista, 'filter-container');
             break;
         case 'preco-desc': 
             lista.sort((a, b) => b.preco - a.preco); 
             mostrarConteudoFiltrado = true;
-            renderProdutos(lista, 'filter-container');
+            mostrarProdutos(lista, 'filter-container');
             break;
         case 'quantidade-asc': 
             lista.sort((a, b) => a.quantidade - b.quantidade);
             mostrarConteudoFiltrado = true; 
-            renderProdutos(lista, 'filter-container');
+            mostrarProdutos(lista, 'filter-container');
             break;
         case 'quantidade-desc': 
             lista.sort((a, b) => b.quantidade - a.quantidade);
             mostrarConteudoFiltrado = true; 
-            renderProdutos(lista, 'filter-container');
+            mostrarProdutos(lista, 'filter-container');
             break;
         case 'distancia': 
             lista.sort((a, b) => a.distancia - b.distancia);
             mostrarConteudoFiltrado = true; 
-            renderProdutos(lista, 'filter-container');
+            mostrarProdutos(lista, 'filter-container');
             break;
       }
     }
@@ -193,5 +196,22 @@
       produtosSelecionados = resultado;
       paginaNormal = false;
       mostrarConteudoFiltrado = true;
-      renderProdutos(resultado, "filter-container");
+      mostrarProdutos(resultado, "filter-container");
+    }
+
+    function VerProduto(produto) {
+      const imagem = `images/cerveja.png`;
+
+      const query = new URLSearchParams({
+        nome: produto.nome,
+        preco: produto.preco,
+        quantidade: produto.quantidade,
+        distancia: produto.distancia,
+        tipo: produto.tipo,
+        categoria: produto.categoria || '',
+        distribuidor: produto.distribuidor || '',
+        imagem: imagem
+      }).toString();
+
+      window.location.href = `produto.html?${query}`;
     }

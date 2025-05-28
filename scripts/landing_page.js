@@ -23,8 +23,6 @@ const produtos = [
 
 function startPage()
 {
-    let conteudoNormal = document.getElementById("regular-exhibition");
-
     ordenar();
 }
 
