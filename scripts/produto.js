@@ -25,9 +25,9 @@ function adicionarAoCarrinho() {
     imagem: getParam("imagem")
   };
 
-  let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || [];
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
   carrinho.push(produto);
-  sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
   alert(`"${produto.nome}" foi adicionado ao carrinho!`);
 }

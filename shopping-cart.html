@@ -7,6 +7,9 @@
     <link href="src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/shopping-cart.css" />
     <script src="scripts/checkout-cart.js" defer></script>
+    <script src="scripts/on-load-cart-js" defer></script>
+    <script src="scripts/clean-cart.js" defer></script>
+    <script src="scripts/shoppin-cart.js" defer></script>
     <title>Carrinho</title>
   </head>
   <body>
@@ -23,9 +26,16 @@
         </a>
       </div>
       <h1 class="font-bold text-[1.3rem]">Seu Carrinho</h1>
+      <button
+        id="clean-cart-btn"
+        type="button"
+        class="text-white font-medium w-20 rounded-[13px] bg-primary-orange relative"
+      >
+        Limpar carrinho
+      </button>
     </header>
     <main>
-      <section class="overflow-scroll h-[20rem]">
+      <section class="p-5 overflow-scroll h-[20rem]" id="cart-item-container">
         <template id="cart-item-template">
           <div
             class="cart-item-block flex p-5 py-2 gap-2 border-b-2 border-gray-100"
@@ -40,14 +50,16 @@
               <p class="opacity-[0.43]">Texto genérico da loja</p>
               <span class="font-bold" id="price">R$ 29.99</span>
             </div>
-            <div class="flex items-center gap-2 mt-10">
+            <div class="flex items-center gap-2 mt-10 fixed right-10">
               <button
+                id="minus-btn"
                 class="bg-gray-100 h-5 w-5 rounded-full border flex items-center justify-center"
               >
                 <img src="images/minus-svgrepo-com.svg" />
               </button>
-              <span class="opacity-[0.43]" id="units">01</span>
+              <span class="opacity-[0.43]" id="units">1</span>
               <button
+                id="add-btn"
                 class="bg-black h-5 w-5 rounded-full border flex items-center justify-center"
               >
                 <img src="images/plus-svgrepo-com(3).svg" />
