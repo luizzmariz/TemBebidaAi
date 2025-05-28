@@ -24,6 +24,8 @@ form.addEventListener('submit', (event) => {
 
     currentUser.email = email;
     currentUser.password = password;
+
+    window.location.href = 'home_page.html';
 });
 
 eyeButton.addEventListener('click', () => {

@@ -23,8 +23,6 @@ const produtos = [
 
 function startPage()
 {
-    let conteudoNormal = document.getElementById("regular-exhibition");
-
     ordenar();
 }
 
@@ -37,7 +35,10 @@ function renderProdutos(lista, containerId)
 
     lista.slice(0, 4).forEach(prod => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card clickable Expandable';
+        
+    card.addEventListener('click', () => alert('Você precisa indicar um endereço antes ou se cadastrar'));
+
     card.innerHTML = `
         <img src="images/cerveja.png" class="card-img-top" alt="${prod.nome}">
         <div class="card-body">
@@ -62,7 +63,4 @@ function ordenar()
     renderProdutos(lista.filter((produto) => { return produto.promocao === true }), 'ofertas-container');
     
     renderProdutos(lista.filter((produto) => { return produto.destaque === true }), 'destaques-container');
-
-    lista.sort((a, b) => a.distancia - b.distancia);
-    renderProdutos(lista, 'proximos-container');
 }
