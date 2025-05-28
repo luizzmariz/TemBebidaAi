@@ -11,20 +11,25 @@ document.getElementById("formBebida").addEventListener("submit", function(e) {
     }
 
     const bebida = {
-        nome: document.getElementById("nome").value,
-        tipo: document.getElementById("tipo").value,
-        descricao: document.getElementById("descricao").value,
-        preco: preco, 
-        imagem: document.getElementById("imagem").value.split("\\").pop() // Apenas o nome do arquivo
+    nome: document.getElementById("nome").value,
+    tipo: document.getElementById("tipo").value,
+    preco: preco,
+    imagem: document.getElementById("imagem").value.split("\\").pop(),
+    categoria: document.getElementById("categoria").value || "",
+    quantidade: parseInt(document.getElementById("quantidade").value) || 0,
+    distancia: Math.floor(Math.random() * 5) + 1,
+    distribuidor: sessionStorage.getItem("user") 
+        ? JSON.parse(sessionStorage.getItem("user")).email 
+        : "Distribuidor Desconhecido",
+    destaque: false,
+    promocao: false
     };
 
-    // Recupera bebidas existentes ou inicia um array vazio
-    let bebidas = JSON.parse(localStorage.getItem("bebidas")) || [];
-    bebidas.push(bebida);
 
-    // Armazena o array atualizado no localStorage
-    localStorage.setItem("bebidas", JSON.stringify(bebidas));
-    this.reset();
+    let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+    produtos.push(bebida);
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+
     
     // Mostra a mensagem de sucesso
     const mensagem = document.getElementById("mensagem-sucesso");

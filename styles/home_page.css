@@ -1,73 +1,108 @@
-  body {
-    padding-top: 70px;
-    background-color: #f1f3f5;
-  }
-  .navbar-brand {
-    font-weight: bold;
-  }
+body {
+  padding-top: 70px;
+  background-color: #f1f3f5;
+}
 
-  .navbar {
-    margin-bottom: 0;
-  }
-  
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    z-index: 1040;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
+.navbar-brand {
+  font-weight: bold;
+}
 
-  .search-container {
-    border-top: 1px solid #eee;
-  }
+.navbar {
+  margin-bottom: 0;
+}
 
-  .search-bar {
-    padding: 20px 0;
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 1040;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    max-width: 700px;
-    margin: 0 auto;
-  }
+.search-container {
+  border-top: 1px solid #eee;
+}
 
-  .search-controls {
-    display: flex;
-    gap: 10px;
-  }
+.search-bar {
+  padding: 20px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-  .page-content {
-    position: sticky;
-    margin-top: 20vh;
-  }
-  .carousel-inner {
-    display: flex;
-  }
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+.search-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.page-content {
+  position: sticky;
+  margin-top: 25vh;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex: 1 1 100%;
+
+  margin-right: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+@media (min-width: 576px) {
   .card {
-    width: 18rem;
+    flex: 0 0 calc(50% - 20px);
   }
+}
 
-  .item.active {
-    display: none;
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
   }
+}
 
-  #titulo{
-    font-size: xx-large;
-    
-    text-align: center;
-    padding-bottom: 1vh;
+@media (min-width: 992px) {
+  .card {
+    flex: 0 0 calc(25% - 20px);
   }
+}
 
-  .clickable {
-    cursor: pointer;
-  }
+#titulo {
+  font-size: xx-large;
+  text-align: center;
+  padding-bottom: 1vh;
+}
 
-  .Expandable:hover {
-    transform: scale(1.02);
-  }
+.clickable {
+  cursor: pointer;
+}
+
+.Expandable:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}

@@ -12,28 +12,27 @@ const form = document.querySelector('form');
 
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const formData = new FormData(event.target);
-    const password = formData.get('user-password');
-    const email = formData.get('user-email');
+  const formData = new FormData(event.target);
+  const password = formData.get('user-password');
+  const email = formData.get('user-email');
+  const endereco = formData.get('user-endereco');
 
-    console.log(email);
-    if(!email || !password){
-        alert('Preencha todos os campos');
-        return;
-    }
+  if (!email || !password || !endereco) {
+    alert('Preencha todos os campos');
+    return;
+  }
 
-    currentUser.email = email;
-    currentUser.password = password;
-    currentUser.endereco = '';
-    currentUser.perfil = 'usuario';
+  currentUser.email = email;
+  currentUser.password = password;
+  currentUser.endereco = endereco;
+  currentUser.perfil = 'usuario';
 
-    sessionStorage.setItem("user", JSON.stringify(currentUser));
-
-
-    window.location.href = 'home_page.html';
+  sessionStorage.setItem("user", JSON.stringify(currentUser));
+  window.location.href = 'home_page.html';
 });
+
 
 eyeButton.addEventListener('click', () => {
     if(passwordInput.type === 'password'){
