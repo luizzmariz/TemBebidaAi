@@ -62,7 +62,4 @@ function ordenar()
     renderProdutos(lista.filter((produto) => { return produto.promocao === true }), 'ofertas-container');
     
     renderProdutos(lista.filter((produto) => { return produto.destaque === true }), 'destaques-container');
-
-    lista.sort((a, b) => a.distancia - b.distancia);
-    renderProdutos(lista, 'proximos-container');
 }
