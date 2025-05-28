@@ -6,7 +6,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/payment.css" />
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAit38ANupzISIqTi9UM21zUHkz41oiJvE&loading=async&libraries=places&callback=initMap">
+    </script>
+    <script src="scripts/adress-filter-modal.js" defer></script>
     <script src="scripts/change-card.js" defer></script>
+    <script src="scripts/auto-complete.js" defer></script>
     <title>Pagamento</title>
   </head>
   <body>
@@ -24,11 +29,13 @@
       </div>
       <h1 class="font-bold text-[1.3rem]">Confirme seu pagamento</h1>
     </header>
+    </div>
     <main>
       <h2 class="font-semibold pl-5 pt-2">Enviando para</h2>
       <div class="flex pt-4 p-5 justify-start gap-1">
         <div class="flex items-center align-middle">
           <img
+            id="map"
             class="h-15 w-15 rounded-[12px] border border-gray-300"
             src="images/map.svg"
             alt="location-icon"
@@ -71,4 +78,27 @@
       </button>
     </main>
   </body>
+  <div id="overlay">
+  <div id="overlay-header" class="flex items-center gap-10">
+    <div class="flex justify-center items-center h-10 w-10 bg-gray-100 rounded-[6px]">
+      <img id="back-icon" class="h-5 w-5" src="images/arrow-icon.svg" alt="back-arrow-icon" />
+    </div>
+    <h1 class="font-bold text-[1.3rem]">Endereço de entrega</h1>
+  </div>
+  <div class="relative h-10 mt-5">
+    <input class="bg-gray-200 w-full" type="text" name="adress-input" id="address-input" placeholder=" Endereço">
+    <img class="h-full w-6 absolute bottom-0 right-2" src="images/search-svgrepo-com.svg">
+    <div id="suggestions">
+      <template>
+      <div class="suggestion-block w-full flex max-w-full items-center gap-2 mt-4 border-b pb-3 border-gray-300">
+        <img class="h-8 w-8" src="images/location-pin-alt-1-svgrepo-com.svg" alt="location-icon">
+        <div>
+          <h2 class="adress-title font-medium">Titulo teste</h2>
+          <p class="adress-info opacity-[0.33]">Rua jose mauro de vasconcelos, 1978, capim soft</p>
+         </div>
+        </div>
+      </div>
+      </template>
+  </div>
+</div>
 </html>
