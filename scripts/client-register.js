@@ -1,6 +1,8 @@
 const currentUser = {
     email: '',
-    password: ''
+    password: '',
+    endereco: '',
+    perfil: ''
 };
 
 const eyeButton = document.getElementById('toggle-password-btn');
@@ -24,6 +26,11 @@ form.addEventListener('submit', (event) => {
 
     currentUser.email = email;
     currentUser.password = password;
+    currentUser.endereco = '';
+    currentUser.perfil = 'usuario';
+
+    sessionStorage.setItem("user", JSON.stringify(currentUser));
+
 
     window.location.href = 'home_page.html';
 });

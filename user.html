@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta - TemBebidaAi?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/user.css">
+  <script defer src="scripts/user.js"></script>
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card p-4 shadow-sm">
+      <h2 class="mb-4">Minhas Informações</h2>
+      <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Senha:</strong> <span id="senha"></span></p>
+
+      <div id="acoes-admin" class="mt-4" style="display: none;">
+        <button class="btn btn-primary">Cadastrar Novo Lojista</button>
+      </div>
+
+      <div id="acoes-lojista" class="mt-4" style="display: none;">
+        <button class="btn btn-success mb-2">Cadastrar Nova Bebida</button>
+        <button class="btn btn-warning">Editar Estoque</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
