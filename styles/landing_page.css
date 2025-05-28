@@ -14,7 +14,22 @@ body {
     gap: 10px;
   }
 
-  .page-content{
-    height: 100vh;
-    background-color: aqua;
+  .page-content {
+    position: sticky;
+    margin-top: 10vh;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    width: 18rem;
+  }
+
+  .item.active {
+    display: none;
   }
