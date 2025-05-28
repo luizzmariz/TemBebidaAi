@@ -63,3 +63,11 @@
     text-align: center;
     padding-bottom: 1vh;
   }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .Expandable:hover {
+    transform: scale(1.02);
+  }

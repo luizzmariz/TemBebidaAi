@@ -11,39 +11,32 @@
 </head>
 
 <body onload="startPage()">
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand">TemBebidaAi?</a>
+      <a class="navbar-brand clickable">TemBebidaAi?</a>
 
-      <!-- Botões Navbar Collapsed  -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Botões Navbar Not-Collapsed  -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">FORNECEDOR</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CARREIRA</a>
+            <a class="nav-link" href="fornecedores.html">FORNECEDOR</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">CRIAR CONTA</a>
+            <a class="nav-link" href="client-register.html">CRIAR CONTA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ENTRAR</a>
+            <a class="nav-link" href="client-register.html">ENTRAR</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Barra de Procura -->
   <div class="search-bar">
     <div class="input-group search-controls">
       <input type="text" class="form-control" placeholder="Sua localização">
@@ -53,17 +46,11 @@
     </div>
   </div>
 
-  <!--  Conteúdo da Página -->
   <div class="container page-content">
     <div id="regular-exhibition">
       <h4 class="mb-3">Ofertas imperdíveis</h4>
       <div id="carousel-ofertas" class="carousel slide mb-4" data-ride="carousel">
         <div class="carousel-inner" id="ofertas-container"></div>
-      </div>
-
-      <h4 class="mb-3">Produtos mais próximos de você</h4>
-      <div id="carousel-proximos" class="carousel slide mb-4" data-ride="carousel">
-        <div class="carousel-inner" id="proximos-container"></div>
       </div>
 
       <h4 class="mb-3">Destaques da semana</h4>

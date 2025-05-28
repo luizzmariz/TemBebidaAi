@@ -33,3 +33,11 @@ body {
   .item.active {
     display: none;
   }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .Expandable:hover {
+    transform: scale(1.02);
+  }
