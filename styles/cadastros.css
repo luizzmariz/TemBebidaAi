@@ -1,9 +1,36 @@
+:root{
+    --orange-primary: #fa5805;
+    --body-bg: #f6f6f6;
+    --black-primary: black;
+}
+
+#submit{
+    background-color: var(--orange-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#limpar{
+    background-color: var(--body-bg);
+    color: var(--black-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 body {
     background-color: #f8f9fa;
 }
 
 a{
-    margin: 5px
+    text-decoration: none;
+    color: var(--black-primary);
+    font-weight: bold;
+    margin: 5px;
 }
 
 #cadastro {
@@ -11,6 +38,7 @@ a{
     width: 70%;
     margin: auto;
     padding: 40px;
+    
 }
 
 @media (max-width: 768px) {
