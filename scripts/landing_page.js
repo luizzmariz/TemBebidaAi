@@ -1,4 +1,9 @@
-const produtos = [
+sessionStorage.clear();
+
+let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+
+if (produtos.length === 0) {
+  produtos = [
     { nome: "Cerveja Pilsen *Promo*", preco: 4.5, quantidade: 100, distancia: 2, tipo: "alcolica", categoria: "CERVEJAS", destaque: true, promocao: true, distribuidor: "Distribuidora Boa Gelada" },
     { nome: "Cerveja IPA", preco: 7.0, quantidade: 60, distancia: 1.5, tipo: "alcolica", categoria: "CERVEJAS", destaque: true, promocao: false, distribuidor: "BebaMais Distribuidora" },
     { nome: "Cerveja Pilsen 2", preco: 7.5, quantidade: 200, distancia: 2.5, tipo: "alcolica", categoria: "CERVEJAS", destaque: true, promocao: false, distribuidor: "Lúpulo Express" },
@@ -20,6 +25,8 @@ const produtos = [
     { nome: "Energético", preco: 10.0, quantidade: 30, distancia: 3.5, tipo: "nao-alcolica", destaque: false, promocao: false, distribuidor: "Power Distribuidora" },
     { nome: "Chá Gelado", preco: 4.0, quantidade: 60, distancia: 2, tipo: "nao-alcolica", destaque: false, promocao: false, distribuidor: "Natureza Sucos" }
 ];
+  localStorage.setItem('produtos', JSON.stringify(produtos));
+}
 
 function startPage()
 {

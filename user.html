@@ -16,15 +16,15 @@
       <h2 class="mb-4">Minhas Informações</h2>
       <p><strong>Endereço:</strong> <span id="endereco"></span></p>
       <p><strong>Email:</strong> <span id="email"></span></p>
-      <p><strong>Senha:</strong> <span id="senha"></span></p>
+      <p><strong>Senha:</strong> <span id="password"></span></p>
 
-      <div id="acoes-admin" class="mt-4" style="display: none;">
-        <button class="btn btn-primary">Cadastrar Novo Lojista</button>
+      <div id="acoes-admin" class="mt-4">
+        <button class="btn btn-primary" onclick="CadastrarLojista()">Cadastrar Novo Lojista</button>
       </div>
 
-      <div id="acoes-lojista" class="mt-4" style="display: none;">
-        <button class="btn btn-success mb-2">Cadastrar Nova Bebida</button>
-        <button class="btn btn-warning">Editar Estoque</button>
+      <div id="acoes-lojista" class="mt-4">
+        <button class="btn btn-success mb-2" onclick="CadastrarBebida()">Cadastrar Nova Bebida</button>
+        <button class="btn btn-warning" onclick="CadastrarLojista()">Editar Estoque</button>
       </div>
     </div>
   </div>
