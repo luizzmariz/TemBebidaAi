@@ -84,6 +84,8 @@ function onEnter(event) {
       placeInfo.title = limparTexto(titulo);
       placeInfo.desc = limparTexto(descricao);
 
+      localStorage.setItem('place-information', JSON.stringify(placeInfo));
+
       document.getElementById('location').textContent = placeInfo.title;
       document.getElementById('location-description').textContent = placeInfo.desc;
 
