@@ -2,7 +2,8 @@ sessionStorage.clear();
 
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
-if (produtos.length === 0) {
+if (produtos.length === 0) 
+    {
   produtos = [
     { nome: "Cerveja Pilsen *Promo*", preco: 4.5, quantidade: 100, distancia: 2, tipo: "alcolica", categoria: "CERVEJAS", destaque: true, promocao: true, distribuidor: "Distribuidora Boa Gelada" },
     { nome: "Cerveja IPA", preco: 7.0, quantidade: 60, distancia: 1.5, tipo: "alcolica", categoria: "CERVEJAS", destaque: true, promocao: false, distribuidor: "BebaMais Distribuidora" },

@@ -21,3 +21,8 @@ function CadastrarBebida()
 {
   window.location.href = 'cadastro_bebidas.html';
 }
+
+function EditarEstoque()
+{
+  window.location.href='editar_estoque.html';
+}
