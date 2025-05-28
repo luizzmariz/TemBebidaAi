@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   const placeInfoString = localStorage.getItem('place-information');
-
+  const totalToPay = document.getElementById('total-price2');
+  totalToPay.innerText = localStorage.getItem('price-total');
   if (placeInfoString) {
     const placeInfo = JSON.parse(placeInfoString);
     document.getElementById('location').textContent = placeInfo.title;

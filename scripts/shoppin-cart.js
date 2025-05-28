@@ -1,3 +1,5 @@
+const totalInfo = document.getElementById('total-price');
+
 function addUnits(){
     const un = document.getElementById('units');
     if(un.innerText >= 0){
@@ -32,6 +34,7 @@ function updateCartPrices(){
   document.getElementById('shipping-price').textContent = `R$ ${frete.toFixed(2)}`;
   document.getElementById('total-price').textContent = `R$ ${(subtotal + frete).toFixed(2)}`;
   document.getElementById('items-qnt').textContent = `(${totalItems} itens)`;
+  localStorage.setItem('price-total', totalInfo.innerText);
 }
 
 function updateValuesCart() {
@@ -64,4 +67,5 @@ function updateValuesCart() {
     totalElement.textContent = `R$ ${frete.toFixed(2)}`;
     itensQntElement.textContent = `(0 itens)`;
   }
+    localStorage.setItem('price-total', totalInfo.innerText);
 }
