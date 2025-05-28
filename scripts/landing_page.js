@@ -35,7 +35,10 @@ function renderProdutos(lista, containerId)
 
     lista.slice(0, 4).forEach(prod => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card clickable Expandable';
+        
+    card.addEventListener('click', () => alert('Você precisa indicar um endereço antes ou se cadastrar'));
+
     card.innerHTML = `
         <img src="images/cerveja.png" class="card-img-top" alt="${prod.nome}">
         <div class="card-body">
