@@ -215,3 +215,8 @@
 
       window.location.href = `produto.html?${query}`;
     }
+
+    function sair() {
+      sessionStorage.clear();
+      window.location.href = "landing_page.html";
+    }

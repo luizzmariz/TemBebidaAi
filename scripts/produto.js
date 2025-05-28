@@ -15,3 +15,20 @@ function carregarProduto() {
   document.getElementById("imagem-produto").src = getParam("imagem");
   document.getElementById("imagem-produto").alt = getParam("nome");
 }
+
+function adicionarAoCarrinho() {
+  const produto = {
+    nome: getParam("nome"),
+    preco: parseFloat(getParam("preco")),
+    quantidade: parseInt(getParam("quantidade")),
+    distribuidor: getParam("distribuidor"),
+    imagem: getParam("imagem")
+  };
+
+  let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || [];
+  carrinho.push(produto);
+  sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+  alert(`"${produto.nome}" foi adicionado ao carrinho!`);
+}
+
