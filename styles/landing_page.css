@@ -19,16 +19,54 @@ body {
     margin-top: 10vh;
   }
   .carousel-inner {
-    display: flex;
-  }
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex: 1 1 100%;
+
+  margin-right: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+@media (min-width: 576px) {
   .card {
-    width: 18rem;
+    flex: 0 0 calc(50% - 20px);
   }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    flex: 0 0 calc(25% - 20px);
+  }
+}
 
   .item.active {
     display: none;
