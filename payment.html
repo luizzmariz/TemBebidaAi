@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/payment.css" />
+    <script src="scripts/change-card.js" defer></script>
+    <title>Pagamento</title>
+  </head>
+  <body>
+    <header class="flex p-5 items-center gap-10">
+      <div
+        class="flex justify-center items-center h-10 w-10 bg-gray-100 rounded-[6px]"
+      >
+        <img
+          class="h-5 w-5"
+          src="images/arrow-icon.svg"
+          alt="back-arrow-icon"
+        />
+      </div>
+      <h1 class="font-bold text-[1.3rem]">Confirme seu pagamento</h1>
+    </header>
+    <main>
+      <h2 class="font-semibold pl-5 pt-2">Enviando para</h2>
+      <div class="flex pt-4 p-5 justify-start gap-1">
+        <div class="flex items-center align-middle">
+          <img
+            class="h-15 w-15 rounded-[12px] border border-gray-300"
+            src="images/map.svg"
+            alt="location-icon"
+          />
+        </div>
+        <div class="pl-2 flex flex-col mt-2">
+          <h2 class="font-bold" id="location">Casa</h2>
+          <p class="opacity-[0.43]" id="location-description">
+            Localização de teste bla bla
+          </p>
+        </div>
+      </div>
+      <h2 class="font-medium pl-5 text-[1.2rem]">
+        Adicionar método de pagamento
+      </h2>
+      <div class="py-2 gap-5 flex justify-center">
+        <div id="master-card-sec" class="card-payment">
+          <img src="images/mastercard-svgrepo-com.svg" />
+        </div>
+        <div id="visa-card-sec" class="card-payment">
+          <img src="images/visa-svgrepo-com.svg" />
+        </div>
+      </div>
+      <div class="mt-1">
+        <img
+          id="card-image"
+          class="m-auto"
+          src="images/master-card.png"
+          alt="card-cover"
+        />
+      </div>
+      <div class="cart-prices">
+        <h2 class="font-bold">Total a pagar :</h2>
+        <p id="total-price2">R$50.99</p>
+      </div>
+      <button
+        class="bg-primary-orange text-white w-[90%] rounded-[10px] font-medium ml-5 shadow-2xl mt-5 h-15"
+      >
+        Confirmar Pagamento
+      </button>
+    </main>
+  </body>
+</html>
