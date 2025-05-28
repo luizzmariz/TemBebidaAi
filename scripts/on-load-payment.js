@@ -9,3 +9,9 @@ window.addEventListener('load', () => {
     console.log('Nenhuma informação encontrada no localStorage.');
   }
 });
+
+const confirmButton = document.getElementById('confirm-btn');
+
+confirmButton.addEventListener('click', ()=> {
+  window.location.href = 'payment-confirmed.html';
+})
